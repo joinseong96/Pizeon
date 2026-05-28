@@ -59,46 +59,48 @@ export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header
-			onMouseEnter={() => setIsOpen(true)}
-			onMouseLeave={() => setIsOpen(false)}
-		>
-			<h1>
-				<a href="#">
-					<img src="" alt="" />
-				</a>
-			</h1>
-			<div className="hd_cont">
-				<nav>
-					<ul>
-						{navItems.map((item) => (
-							<li key={item.label}>
-								<a href={item.href}>{item.label}</a>
-							</li>
-						))}
-					</ul>
-				</nav>
-				{isOpen && (
-					<div className="sub_menu_wp">
-						{navItems.map((item) => (
-							<ul key={item.label}>
-								{item.sub &&
-									item.sub.map((s) => (
-										<li key={s.label}>
-											<a href={s.href}>{s.label}</a>
-										</li>
-									))}
-							</ul>
-						))}
-					</div>
-				)}
-				<div className="hd_btn_wp">
-					<div className="lang_box">
-						<span>KR</span>
-					</div>
-					<a href="#" target="_blank">
-						피죤 공식몰
+		<header>
+			<div className="hd_inner">
+				<h1>
+					<a href="#">
+						<img src="../../public/images/logo.png" alt="" />
 					</a>
+				</h1>
+				<div className="hd_cont">
+					<nav
+						onMouseEnter={() => setIsOpen(true)}
+						onMouseLeave={() => setIsOpen(false)}
+					>
+						<ul className="main_menu_wp">
+							{navItems.map((item) => (
+								<li key={item.label}>
+									<a href={item.href}>{item.label}</a>
+								</li>
+							))}
+						</ul>
+						<div className={`sub_menu_wp${isOpen ? " active" : ""}`}>
+							<div className="lnb_inner">
+								{navItems.map((item) => (
+									<ul key={item.label}>
+										{item.sub &&
+											item.sub.map((s) => (
+												<li key={s.label}>
+													<a href={s.href}>{s.label}</a>
+												</li>
+											))}
+									</ul>
+								))}
+							</div>
+						</div>
+					</nav>
+					<div className="hd_btn_wp">
+						<div className="lang_box">
+							<span>KR</span>
+						</div>
+						<a href="#" target="_blank">
+							피죤 공식몰
+						</a>
+					</div>
 				</div>
 			</div>
 		</header>
