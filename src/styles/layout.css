@@ -1,0 +1,9 @@
+.main_bnr .swiper {
+	width: 100%;
+	height: 953px;
+}
+.main_bnr .swiper .cont_img,
+.main_bnr .swiper img {
+	width: 100%;
+	height: 100%;
+}

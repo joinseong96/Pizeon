@@ -58,9 +58,11 @@ h1 a {
 	width: 100%;
 	height: 400px;
 	background: #fff;
+	pointer-events: none;
 }
 .sub_menu_wp.active {
 	opacity: 1;
+	pointer-events: auto;
 }
 .sub_menu_wp .lnb_inner {
 	position: absolute;

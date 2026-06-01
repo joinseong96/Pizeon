@@ -12,7 +12,7 @@ export default function MainBanner() {
 		if (!window.Swiper) return;
 		new window.Swiper(".swiper", {
 			loop: true,
-			autoplay: { delay: 4000 },
+			// autoplay: { delay: 4000 },
 		});
 	}, []);
 
