@@ -7,3 +7,63 @@
 	width: 100%;
 	height: 100%;
 }
+.main_bnr .cont_txt {
+	position: absolute;
+	top: 340px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-left: -400px;
+}
+.main_bnr .cont_txt strong {
+	display: block;
+	margin-bottom: 42px;
+	font-size: 72px;
+	color: #111;
+}
+.main_bnr .cont_txt p {
+	font-size: 22px;
+	color: #432f2f;
+}
+
+.bnr_control {
+	width: 270px;
+	position: absolute;
+	bottom: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-left: -700px;
+	z-index: 100;
+}
+.bnr_control .btn_wp {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.bnr_nav {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.bnr_nav button {
+	font-size: 20px;
+}
+.bnr_progress {
+	width: 100%;
+	height: 2px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.bnr_progress_bar {
+	width: 0;
+	height: 100%;
+	background: #222;
+}
+
+@keyframes progress {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
