@@ -16,6 +16,7 @@ export default function MainBanner() {
 				delay: 4000,
 				disableOnInteraction: false,
 			},
+			speed: 800,
 			on: {
 				slideChange: function () {
 					const bar = document.querySelector(".bnr_progress_bar");
