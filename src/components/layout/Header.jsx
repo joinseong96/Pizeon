@@ -1,25 +1,26 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const navItems = [
 	{
 		label: "피존 소개",
-		href: "about.html",
+		href: "/",
 		sub: [
 			{
 				label: "회사 소개",
-				href: "#",
+				href: "/about/company",
 			},
 			{
 				label: "회사 연혁",
-				href: "#",
+				href: "/about/history",
 			},
 			{
 				label: "CEO 인사말",
-				href: "#",
+				href: "/about/ceo",
 			},
 			{
 				label: "오시는 길",
-				href: "#",
+				href: "/about/location",
 			},
 		],
 	},
@@ -62,9 +63,9 @@ export default function Header() {
 		<header>
 			<div className="hd_inner">
 				<h1>
-					<a href="#">
+					<Link to="/">
 						<img src="../../public/images/logo.png" alt="" />
-					</a>
+					</Link>
 				</h1>
 				<div className="hd_cont">
 					<nav
@@ -74,7 +75,7 @@ export default function Header() {
 						<ul className="main_menu_wp">
 							{navItems.map((item) => (
 								<li key={item.label}>
-									<a href={item.href}>{item.label}</a>
+									<Link to={item.href}>{item.label}</Link>
 								</li>
 							))}
 						</ul>
@@ -85,7 +86,7 @@ export default function Header() {
 										{item.sub &&
 											item.sub.map((s) => (
 												<li key={s.label}>
-													<a href={s.href}>{s.label}</a>
+													<Link to={s.href}>{s.label}</Link>
 												</li>
 											))}
 									</ul>
@@ -97,9 +98,9 @@ export default function Header() {
 						<div className="lang_box">
 							<span>KR</span>
 						</div>
-						<a href="#" target="_blank">
+						<Link to="/" target="_blank">
 							피죤 공식몰
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
