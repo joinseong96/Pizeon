@@ -45,10 +45,6 @@ h1 a {
 	color: #222;
 	text-align: center;
 }
-.hd_btn_wp {
-	display: flex;
-	gap: 22px;
-}
 .sub_menu_wp {
 	position: fixed;
 	top: 90px;

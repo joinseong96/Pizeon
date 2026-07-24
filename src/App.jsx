@@ -2,10 +2,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Main from "./pages/Main";
 import Footer from "./components/layout/Footer";
-import Company from "./pages/about/Company";
-import History from "./pages/about/History";
-import Ceo from "./pages/about/Ceo";
-import Location from "./pages/about/Location";
+import About from "./pages/about/About";
+import Brand from "./pages/brand/Brand";
+import News from "./pages/news/News";
+import Contact from "./pages/contact/Contact";
 import "./styles/reset.css";
 import "./styles/common.css";
 import "./styles/layout.css";
@@ -16,10 +16,10 @@ export default function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Main />} />
-				<Route path="/about/company" element={<Company />} />
-				<Route path="/about/history" element={<History />} />
-				<Route path="/about/ceo" element={<Ceo />} />
-				<Route path="/about/location" element={<Location />} />
+				<Route path="/about/About" element={<About />} />
+				<Route path="/brand/Brand" element={<Brand />} />
+				<Route path="/news/News" element={<News />} />
+				<Route path="/contact/Contact" element={<Contact />} />
 			</Routes>
 			<Footer />
 		</div>

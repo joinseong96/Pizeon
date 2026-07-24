@@ -4,54 +4,54 @@ import { Link } from "react-router-dom";
 const navItems = [
 	{
 		label: "피존 소개",
-		href: "/",
+		href: "/about/About",
 		sub: [
 			{
 				label: "회사 소개",
-				href: "/about/company",
+				href: "/about/About",
 			},
 			{
 				label: "회사 연혁",
-				href: "/about/history",
+				href: "/about/About",
 			},
 			{
 				label: "CEO 인사말",
-				href: "/about/ceo",
+				href: "/about/About",
 			},
 			{
 				label: "오시는 길",
-				href: "/about/location",
+				href: "/about/About",
 			},
 		],
 	},
 	{
 		label: "브랜드",
-		href: "#",
+		href: "/brand/Brand",
 		sub: [
-			{ label: "전체", href: "#" },
-			{ label: "피죤", href: "#" },
-			{ label: "액츠", href: "#" },
-			{ label: "퓨어", href: "#" },
-			{ label: "무균무때", href: "#" },
-			{ label: "칼랑한스", href: "#" },
-			{ label: "습기제로", href: "#" },
-			{ label: "울터치", href: "#" },
+			{ label: "전체", href: "/brand/Brand" },
+			{ label: "피죤", href: "/brand/Brand" },
+			{ label: "액츠", href: "/brand/Brand" },
+			{ label: "퓨어", href: "/brand/Brand" },
+			{ label: "무균무때", href: "/brand/Brand" },
+			{ label: "칼랑한스", href: "/brand/Brand" },
+			{ label: "습기제로", href: "/brand/Brand" },
+			{ label: "울터치", href: "/brand/Brand" },
 		],
 	},
 	{
 		label: "피존 소식",
-		href: "about.html",
+		href: "/news/News",
 		sub: [
-			{ label: "인재채용", href: "#" },
-			{ label: "문의하기", href: "#" },
+			{ label: "인재채용", href: "/news/News" },
+			{ label: "문의하기", href: "/news/News" },
 		],
 	},
 	{
 		label: "채용 및 문의",
-		href: "#",
+		href: "/contact/Contact",
 		sub: [
-			{ label: "인재채용", href: "#" },
-			{ label: "문의하기", href: "#" },
+			{ label: "인재채용", href: "/contact/Contact" },
+			{ label: "문의하기", href: "/contact/Contact" },
 		],
 	},
 ];
@@ -95,9 +95,6 @@ export default function Header() {
 						</div>
 					</nav>
 					<div className="hd_btn_wp">
-						<div className="lang_box">
-							<span>KR</span>
-						</div>
 						<Link to="/" target="_blank">
 							피죤 공식몰
 						</Link>
