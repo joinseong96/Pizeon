@@ -3,7 +3,7 @@ export default function AboutBanner() {
 		<section className="relative w-full h-[980px] overflow-hidden">
 			{/* 배경 이미지 - 실제 이미지 경로로 교체 */}
 			<img
-				src="/images/about/banner.jpg"
+				src="/images/about/about_bnr.jpg"
 				alt="피존 배너"
 				className="w-full h-full object-cover"
 			/>

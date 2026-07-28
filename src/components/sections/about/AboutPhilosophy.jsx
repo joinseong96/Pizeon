@@ -1,64 +1,64 @@
-// 배경 이미지 위에 흩어져 놓이는 3개 항목
-// 캡처처럼 위치가 제각각이라 absolute + 퍼센트 좌표로 배치
+import { useEffect } from "react";
+
 const philosophyItems = [
 	{
+		img: "../images/about/about_slide01.png",
+		subTitle: "Natural",
 		title: "자연중심",
-		desc: "피존은 자연을 담습니다.\n자연에서 얻은 성분과\n가치있는 원료로 만듦으로\n고객님을 생각합니다.",
-		position: "top-1/2 left-8 -translate-y-1/2", // 왼쪽 카드형
-		style: "card",
+		desc: "피죤은 자연을 섬깁니다.\n자연으로 돌아갈 제품은 자연과\n가까워야 한다는 신념으로\n원료부터 패키지까지 친환경 제품을\n고집합니다.",
 	},
 	{
-		title: "엄선 성분",
-		desc: "",
-		position: "top-8 right-40",
-		style: "label",
+		img: "../images/about/about_slide02.png",
+		subTitle: "Safe",
+		title: "안전 성분",
+		desc: "우리 생활과 밀접한 제품인 만큼\n성분에 집중합니다. 고객의 입장에서\n생각하고 만든 안전한 제품으로\n행복한 일상의 가치를 전달하겠습니다.",
 	},
 	{
+		img: "../images/about/about_slide03.png",
+		subTitle: "Quality",
 		title: "품질 최우선",
-		desc: "",
-		position: "bottom-10 right-16",
-		style: "label",
+		desc: "좋은 상품은 갑자기 탄생하는 것이 아니라\n꾸준한 개발과 노력으로 만들어내는 것이라고\n믿습니다. '신뢰'를 동반한 제품으로\n고객 만족을 이어가겠습니다.",
 	},
 ];
 
 export default function AboutPhilosophy() {
+	useEffect(() => {
+		if (!window.Swiper) return;
+		new window.Swiper(".about_swiper", {
+			loop: true,
+			slidesPerView: 1,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			speed: 1200,
+		});
+	}, []);
+
 	return (
-		<section className="py-16">
+		<section className="py-16 w-[1636px] m-auto">
 			<h3 className="text-2xl font-bold text-center mb-10">피존철학</h3>
-
-			<div className="relative w-full h-[420px] overflow-hidden">
-				{/* 배경 이미지 - 실제 이미지 경로로 교체 */}
-				<img
-					src="/images/about/philosophy.jpg"
-					alt="피존 철학"
-					className="w-full h-full object-cover"
-				/>
-
-				{philosophyItems.map((item, i) =>
-					item.style === "card" ? (
-						// 왼쪽 텍스트 카드형 항목
-						<div
-							key={i}
-							className={`absolute ${item.position} bg-white/90 rounded-lg p-6 max-w-xs`}
-						>
-							<p className="text-xs text-[#5b7a6a] font-semibold mb-2">
-								Natural
-							</p>
-							<h4 className="text-lg font-bold mb-3">{item.title}</h4>
-							<p className="text-sm text-gray-600 whitespace-pre-line leading-relaxed">
-								{item.desc}
-							</p>
+			<div className="swiper about_swiper">
+				<div className="swiper-wrapper">
+					{philosophyItems.map((item, i) => (
+						<div key={i} className="swiper-slide">
+							<div className="absolute top-[140px] w-[25%] left-[50%] transform translateX-[-50%] ml-[-600px] p-[55px] bg-[rgba(0,0,0,0.8)]">
+								<p className="text-[18px] text-[rgba(255,255,255,0.6)] font-medium mb-3">
+									{item.subTitle}
+								</p>
+								<h4 className="text-[24px] text-white font-semibold mb-5">
+									{item.title}
+								</h4>
+								<p className="text-[18px] text-white whitespace-pre-line leading-relaxed">
+									{item.desc}
+								</p>
+							</div>
+							<div>
+								<img src={item.img} alt="피존 철학" />
+							</div>
 						</div>
-					) : (
-						// 이미지 위 짧은 라벨형 항목
-						<span
-							key={i}
-							className={`absolute ${item.position} text-white text-sm font-medium`}
-						>
-							{item.title}
-						</span>
-					),
-				)}
+					))}
+				</div>
 			</div>
 		</section>
 	);
