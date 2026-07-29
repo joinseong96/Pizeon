@@ -1,3 +1,11 @@
+import PageTitle from "../../components/common/PageTitle";
+import BrandCard from "../../components/sections/brand/BrandCard";
+
 export default function Brand() {
-	return <h2>브랜드</h2>;
+	return (
+		<div className="pt-[150px]">
+			<PageTitle title="Brand" />
+			<BrandCard />
+		</div>
+	);
 }

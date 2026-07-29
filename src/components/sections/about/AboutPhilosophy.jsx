@@ -17,7 +17,7 @@ const philosophyItems = [
 		img: "../images/about/about_slide03.png",
 		subTitle: "Quality",
 		title: "품질 최우선",
-		desc: "좋은 상품은 갑자기 탄생하는 것이 아니라\n꾸준한 개발과 노력으로 만들어내는 것이라고\n믿습니다. '신뢰'를 동반한 제품으로\n고객 만족을 이어가겠습니다.",
+		desc: "좋은 상품은 갑자기 탄생하는 것이 아니라 꾸준한 개발과 노력으로\n 만들어내는 것이라고 믿습니다.\n '신뢰'를 동반한 제품으로\n고객 만족을 이어가겠습니다.",
 	},
 ];
 
@@ -37,7 +37,7 @@ export default function AboutPhilosophy() {
 
 	return (
 		<section className="py-16 w-[1636px] m-auto">
-			<h3 className="text-2xl font-bold text-center mb-10">피존철학</h3>
+			<h3 className="text-[50px] font-bold text-center mb-[80px]">피죤철학</h3>
 			<div className="swiper about_swiper">
 				<div className="swiper-wrapper">
 					{philosophyItems.map((item, i) => (
