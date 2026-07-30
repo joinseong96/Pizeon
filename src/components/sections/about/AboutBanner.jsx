@@ -1,6 +1,6 @@
 export default function AboutBanner() {
 	return (
-		<section className="relative w-full h-[980px] overflow-hidden">
+		<section className="relative w-full h-[980px] mb-[100px] overflow-hidden">
 			<img
 				src="/images/about/about_bnr.jpg"
 				alt="피존 배너"

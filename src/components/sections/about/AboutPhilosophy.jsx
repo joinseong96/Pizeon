@@ -32,11 +32,12 @@ export default function AboutPhilosophy() {
 				disableOnInteraction: false,
 			},
 			speed: 1200,
+			allowTouchMove: false,
 		});
 	}, []);
 
 	return (
-		<section className="py-16 w-[1636px] m-auto">
+		<section className="w-[1636px] mx-auto mb-[100px]">
 			<h3 className="text-[50px] font-bold text-center mb-[80px]">피죤철학</h3>
 			<div className="swiper about_swiper">
 				<div className="swiper-wrapper">

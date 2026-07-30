@@ -19,7 +19,7 @@ export default function AboutCi() {
 	const [fileType, setFileType] = useState("Basic");
 
 	return (
-		<section className="py-16 text-center w-[1636px] m-auto">
+		<section className="text-center w-[1636px] mx-auto mb-[100px]">
 			<h3 className="text-[50px] font-bold mb-[20px]">피죤 CI</h3>
 			<p className="text-[20px] text-gray-500 mb-10">
 				자세한 CI(Corporate Identity) 활용과 규정은 파일을 다운로드하여

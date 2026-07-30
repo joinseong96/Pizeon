@@ -55,17 +55,24 @@ export default function BrandCard() {
 		<section className="w-[1636px] m-auto">
 			<ul className="flex flex-wrap gap-[20px]">
 				{brandItems.map((item, i) => (
-					<li key={i} className={`${item.width}`}>
-						<div className="h-[700px] ">
+					<li
+						key={i}
+						className={`relative group after:content-[''] after:absolute after:inset-0
+            after:bg-black/0 hover:after:bg-black/60
+            after:transition-colors after:duration-300 cursor-pointer ${item.width}`}
+					>
+						<div className="h-[700px]">
 							<img
 								className="w-[100%] h-[100%]"
 								src={item.img}
 								alt={item.alt}
 							/>
 						</div>
-						<div>
-							<strong>{item.title}</strong>
-							<p>{item.desc}</p>
+						<div className="absolute top-[50%] left-[70px] translate-y-[-50%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+							<strong className="block text-[#fff] font-semibold text-[45px] mb-[10px]">
+								{item.title}
+							</strong>
+							<p className="text-[#fff] text-[20px]">{item.desc}</p>
 						</div>
 					</li>
 				))}
