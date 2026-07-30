@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
 	{
-		label: "피존 소개",
+		label: "피죤 소개",
 		href: "/about/About",
 		sub: [
 			{
@@ -39,7 +39,7 @@ const navItems = [
 		],
 	},
 	{
-		label: "피존 소식",
+		label: "피죤 소식",
 		href: "/news/News",
 		sub: [
 			{ label: "인재채용", href: "/news/News" },
@@ -59,6 +59,13 @@ const navItems = [
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
+	const location = useLocation();
+
+	const [prevPathname, setPrevPathname] = useState(location.pathname);
+	if (location.pathname !== prevPathname) {
+		setPrevPathname(location.pathname);
+		setIsOpen(false);
+	}
 	return (
 		<header>
 			<div className="hd_inner">
