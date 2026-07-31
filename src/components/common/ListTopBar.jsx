@@ -12,7 +12,7 @@ export default function ListTopBar({
 	const inputRef = useRef(null);
 
 	return (
-		<div className="py-4">
+		<div className="mb-[40px]">
 			<div className="w-[1636px] mx-auto flex items-center justify-between">
 				<p className="text-sm text-gray-600">
 					[<span className="font-semibold text-black">{currentPage}</span> /{" "}

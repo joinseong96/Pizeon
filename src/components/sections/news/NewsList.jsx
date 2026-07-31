@@ -1,51 +1,32 @@
-const newsListItmes = [
-	{
-		img: "../images/news/news_img01.jpg",
-		tag: [{ tagName: "#피죤" }, { tagName: "#박서준" }, { tagName: "#PIGEON" }],
-		title: "[피죤X박서준] 상쾌함과 상쾌함이 만나다",
-		alt: "[피죤X박서준] 상쾌함과 상쾌함이 만나다",
-		date: "2022. 02. 14",
-	},
-	{
-		img: "../images/news/news_img02.jpg",
-		tag: [{ tagName: "#피죤" }, { tagName: "#무균무때" }, { tagName: "#광희" }],
-		title: "무균무때-광희 [인터뷰편]",
-		alt: "무균무때-광희 [인터뷰편]",
-		date: "2022. 02. 10",
-	},
-	{
-		img: "../images/news/news_img03.jpg",
-		tag: [{ tagName: "#피죤" }, { tagName: "#무균무때" }, { tagName: "#광희" }],
-		title: "무균무때-광희 [드릴펑]",
-		alt: "무균무때-광희 [드릴펑]",
-		date: "2022. 02. 04",
-	},
-	{
-		img: "../images/news/news_img04.jpg",
-		tag: [{ tagName: "#피죤" }, { tagName: "#무균무때" }, { tagName: "#광희" }],
-		title: "무균무때-광희 [살균스프레이]",
-		alt: "무균무때-광희 [살균스프레이]",
-		date: "2022. 02. 01",
-	},
-];
+import { newsListItmes, itemsPages } from "./NewsData";
 
-export default function NewsList() {
+export default function NewsList({ currentPage }) {
+	const startIndex = (currentPage - 1) * itemsPages;
+	const endIndex = startIndex + itemsPages;
+	const currentItems = newsListItmes.slice(startIndex, endIndex);
 	return (
-		<div className="w-[1636px] mx-auto">
+		<div className="w-[1636px] mx-auto mb-[100px]">
 			<ul className="flex flex-wrap gap-[80px_20px]">
-				{newsListItmes.map((item, i) => (
+				{currentItems.map((item, i) => (
 					<li key={i}>
-						<div>
+						<div className="mb-[25px]">
 							<img src={item.img} alt={item.alt} />
 						</div>
 						<div>
-							<div>
+							<div className="flex gap-[10px] mb-[10px]">
 								{item.tag.map((t) => (
-									<span key={t}>{t.tagName}</span>
+									<span
+										key={t.tagName}
+										className="font-semibold text-[18px] text-[#002F87]"
+									>
+										{t.tagName}
+									</span>
 								))}
 							</div>
-							<p>{item.title}</p>
-							<small>{item.date}</small>
+							<p className="mb-[35px] text-[24px] font-semibold font-[#222]">
+								{item.title}
+							</p>
+							<small className="text-[#777] text-[16px]">{item.date}</small>
 						</div>
 					</li>
 				))}
