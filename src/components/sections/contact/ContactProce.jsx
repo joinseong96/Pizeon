@@ -79,8 +79,10 @@ const methodList = [
 export default function ContactProce() {
 	return (
 		<div className="pt-[150px] py-[150px] bg-[#fbfbfb]">
-			<div className="w-[1636px] mx-auto flex justify-between ">
-				<h3 className="text-[#222] text-[46px] font-semibold">채용절차</h3>
+			<div className="w-[1436px] mx-auto flex flex-col justify-between ">
+				<h3 className="mb-[100px] text-[#222] text-[46px] font-semibold">
+					채용절차
+				</h3>
 				<div>
 					<ul className="flex mb-[80px]">
 						{proceItems.map((item, i) => (
@@ -121,7 +123,7 @@ export default function ContactProce() {
 							</div>
 						))}
 					</div>
-					<ul className="pt-[80px] flex justify-between border-t border-[#f1f1f1]">
+					<ul className="pt-[80px] flex gap-[200px] border-t border-[#f1f1f1]">
 						{methodList.map((item, i) => (
 							<li key={i} className="w-[240px]">
 								<strong className="block mb-[16px] text-[#000] text-[24px] font-semibold">
