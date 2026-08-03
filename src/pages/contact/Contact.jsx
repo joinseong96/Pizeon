@@ -1,3 +1,13 @@
+import PageTitle from "../../components/common/PageTitle";
+import ContactBnr from "../../components/sections/contact/ContactBnr";
+import ContactProce from "../../components/sections/contact/ContactProce";
+
 export default function Contact() {
-	return <h2>채용 및 문의</h2>;
+	return (
+		<div className="pt-[150px]">
+			<PageTitle title="채용 및 문의" />
+			<ContactBnr />
+			<ContactProce />
+		</div>
+	);
 }

@@ -55,7 +55,7 @@ export default function AboutPhilosophy() {
 								</p>
 							</div>
 							<div>
-								<img src={item.img} alt="피존 철학" />
+								<img src={item.img} alt="피죤 철학" />
 							</div>
 						</div>
 					))}

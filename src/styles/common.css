@@ -80,7 +80,7 @@ h1 a {
 }
 
 /* footer */
-footer {
+footer .inner {
 	width: 1640px;
 	margin: 0 auto;
 	padding: 70px 0;
