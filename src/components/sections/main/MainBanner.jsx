@@ -1,10 +1,27 @@
 import { useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slideItems = [
-	{ img: "../images/main_slide01.jpg" },
-	{ img: "../images/main_slide02.jpg" },
-	{ img: "../images/main_slide03.png" },
-	{ img: "../images/main_slide04.png" },
+	{
+		tit: "Best Quality Life Partner",
+		txt: "44년의 노하우와 환경을 고려하는 기업정신으로 당신 곁에 오래 남겠습니다.",
+		img: "../images/main_slide01.jpg",
+	},
+	{
+		tit: "New Products",
+		txt: "피죤의 신제품 디퓨저, 세가지 향을 지금 경험해보세요.",
+		img: "../images/main_slide02.jpg",
+	},
+	{
+		tit: "PIGEON",
+		txt: "불필요한 증점제와 색소는 빼고 3배 더 강화되어 풍부해진 향기를 경험해보세요.",
+		img: "../images/main_slide03.png",
+	},
+	{
+		tit: "빨래엔 피죤",
+		txt: "2주 동안 머무는 퍼퓸향기 초고농축 피죤 시그니처",
+		img: "../images/main_slide04.png",
+	},
 ];
 
 export default function MainBanner() {
@@ -55,43 +72,45 @@ export default function MainBanner() {
 	}, []);
 
 	return (
-		<section className="main_bnr">
-			<div className="swiper main_swiper">
+		<section>
+			<div className="swiper main_swiper w-full h-[953px]">
 				<div className="swiper-wrapper">
 					{slideItems.map((item, i) => (
 						<div key={i} className="swiper-slide">
-							<div className="cont_img">
+							<div>
 								<img src={item.img} alt="슬라이드 이미지" />
 							</div>
-							<div className="cont_txt">
-								<strong>Best Quality Life Partner</strong>
-								<p>
-									44년의 노하우와 환경을 고려하는 기업정신으로
-									<br />
-									당신 곁에 오래 남겠습니다.
-								</p>
+							<div className="w-[440px] absolute top-[340px] left-[50%] translate-x-[-50%] ml-[-620px]">
+								<strong className="block mb-[42px] text-[72px] text-[#111] leading-[1.2]">
+									{item.tit}
+								</strong>
+								<p className="text-[22px] text-[#432f2f]">{item.txt}</p>
 							</div>
 						</div>
 					))}
 				</div>
 			</div>
 
-			<div className="bnr_control">
-				<div className="btn_wp">
-					<div className="bnr_pagination">
+			<div className="w-[270px] absolute bottom-[200px] left-[50%] translate-x-[-50%] ml-[-700px] z-100">
+				<div className="flex justify-between items-center mb-[30px]">
+					<div>
 						<span className="current">01</span>
 						<span className="divider"> / </span>
 						<span className="total">04</span>
 					</div>
 
-					<div className="bnr_nav">
-						<button className="bnr_prev">‹</button>
-						<button className="bnr_next">›</button>
+					<div className="flex items-center gap-[20px]">
+						<button className="bnr_prev text-[20px]">
+							<ChevronLeft size={16} />
+						</button>
+						<button className="bnr_next">
+							<ChevronRight size={16} />
+						</button>
 						<button className="bnr_stop">■</button>
 					</div>
 				</div>
-				<div className="bnr_progress">
-					<div className="bnr_progress_bar"></div>
+				<div className="bnr_progress w-full h-[2px] bg-[rgba(0,0,0,0.2)]">
+					<div className="bnr_progress_bar w-0 h-[100%] bg-[#222]"></div>
 				</div>
 			</div>
 		</section>

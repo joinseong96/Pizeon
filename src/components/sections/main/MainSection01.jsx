@@ -31,40 +31,79 @@ export default function MainSection01() {
 	const [activeItem, setActiveItem] = useState(0);
 
 	return (
-		<section className="main_sec01">
-			<div className="inner">
-				<div className="sec_tit">
-					<h2>품질 경쟁력을 위한 노력</h2>
-					<p>
+		<section className="pt-[205px] pb-[205px] bg-[#fbfaf9]">
+			<div className="w-[1636px] mx-auto">
+				<div className="mb-[80px] align-middle">
+					<h2 className="mb-[24px] text-[42px] font-semibold text-[#111]">
+						품질 경쟁력을 위한 노력
+					</h2>
+					<p className="text-[22px] text-[#222]">
 						피죤은 고도의 기술력을 가지고 시대 변화에 발맞춰 지속적인 발전을
 						이루어 나가고 있습니다.
 					</p>
 				</div>
-				<ul className="sec01_wp">
-					{sectionItems.map((item, i) => (
-						<li
-							key={i}
-							className={`sec01_item${activeItem === i ? " active" : ""}`}
-							onMouseEnter={() => setActiveItem(i)}
-						>
-							<div className="cont_img">
-								<img src={activeItem === i ? item.imgAfter : item.img} alt="" />
-							</div>
-							<div className="cont_txt">
-								<span>{item.num}</span>
-								<div className="hidden_txt">
-									<strong>{item.title}</strong>
-									{item.sub.map((s, i) => (
-										<div key={i} className="sub_tit">
-											{s}
-											<br />
-										</div>
-									))}
-									<a href={item.href}>View more</a>
+
+				<ul className="flex gap-[20px]">
+					{sectionItems.map((item, i) => {
+						const isActive = activeItem === i;
+
+						return (
+							<li
+								key={i}
+								className="relative overflow-hidden"
+								onMouseEnter={() => setActiveItem(i)}
+							>
+								<div
+									className={`absolute inset-0 z-[1] transition-colors duration-500 ${
+										isActive ? "bg-black/56" : "bg-black/0"
+									}`}
+								/>
+								<div
+									className={`relative h-[600px] transition-[width] duration-500 ${
+										isActive ? "w-[996px]" : "w-[300px]"
+									}`}
+								>
+									<img
+										src={isActive ? item.imgAfter : item.img}
+										alt=""
+										className="w-full h-full object-cover"
+									/>
 								</div>
-							</div>
-						</li>
-					))}
+								<div
+									className={`absolute left-[80px] z-10 text-white transition-all duration-500 ${
+										isActive
+											? "top-1/2 -translate-y-1/2"
+											: "top-[273px] translate-y-0"
+									}`}
+								>
+									<span className="flex w-[54px] h-[54px] justify-center items-center mb-[64px] p-[10px] text-[30px] italic text-white rounded-full border border-white">
+										{item.num}
+									</span>
+									<div
+										className={`text-white whitespace-nowrap transition-[opacity,visibility] duration-500 ${
+											isActive ? "visible opacity-100" : "invisible opacity-0"
+										}`}
+									>
+										<strong className="block mb-[24px] text-[38px]">
+											{item.title}
+										</strong>
+										{item.sub.map((s, j) => (
+											<div key={j} className="text-[18px]">
+												{s}
+												<br />
+											</div>
+										))}
+										<a
+											href={item.href}
+											className="block mt-[80px] text-[14px] font-medium"
+										>
+											View more
+										</a>
+									</div>
+								</div>
+							</li>
+						);
+					})}
 				</ul>
 			</div>
 		</section>

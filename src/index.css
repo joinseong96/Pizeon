@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@keyframes progress {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@theme {
+	--breakpoint-ta: 1700px;
+	--breakpoint-mo: 768px;
+}
