@@ -56,27 +56,33 @@ export default function Header() {
 	}
 
 	return (
-		<header className="fixed top-0 left-0 z-[100000] w-full bg-white border-b border-[#eee]">
-			<div className="flex items-center justify-between w-[1600px] mx-auto">
+		<header className="fixed top-0 left-0 z-[1000] w-full bg-white border-b border-[#eee]">
+			<div className="flex items-center justify-between w-[1600px] mx-auto max-ta:w-[calc(100vw*(1500/1700))]">
 				<h1>
-					<Link to="/" className="block w-[110px] h-[55px]">
+					<Link
+						to="/"
+						className="block w-[110px] h-[55px] max-ta:w-[calc(100vw*(110/1700))] max-ta:h-[calc(100vw*(55/1700))]"
+					>
 						<img src="../../public/images/logo.png" alt="" />
 					</Link>
 				</h1>
 
-				<div className="flex items-center justify-between w-[800px]">
+				<div className="flex items-center justify-between w-[800px] max-ta:w-[calc(100vw*(800/1700))]">
 					<nav
-						className="relative flex items-center w-[508px] h-[90px] py-[15px]"
+						className="relative flex items-center w-[508px] h-[90px] py-[15px] max-ta:w-[calc(100vw*(508/1700))] max-ta:h-[calc(100vw*(90/1700))] max-ta:py-[calc(100vw*(15/1700))]"
 						onMouseEnter={() => setIsOpen(true)}
 						onMouseLeave={() => setIsOpen(false)}
 					>
 						{/* 1depth 메뉴 */}
 						<ul className="flex justify-between w-full">
 							{navItems.map((item) => (
-								<li key={item.label} className="w-[100px]">
+								<li
+									key={item.label}
+									className="w-[100px] max-ta:w-[calc(100vw*(100/1700))]"
+								>
 									<Link
 										to={item.href}
-										className="block text-[18px] font-medium text-[#222] text-center"
+										className="block text-[18px] font-medium text-[#222] text-center max-ta:text-[calc(100vw*(18/1700))]"
 									>
 										{item.label}
 									</Link>
@@ -90,17 +96,20 @@ export default function Header() {
 								isOpen
 									? "opacity-100 pointer-events-auto"
 									: "opacity-0 pointer-events-none"
-							}`}
+							} max-ta:top-[calc(100vw*(90/1700))] max-ta:h-[calc(100vw*(400/1700))]`}
 						>
-							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px]">
+							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px] max-ta:top-[calc(100vw*(34/1700))] max-ta:ml-[calc(100vw*(255/1700))]">
 								{navItems.map((item) => (
 									<ul key={item.label} className="flex flex-col gap-4">
 										{item.sub &&
 											item.sub.map((s) => (
-												<li key={s.label} className="w-[100px]">
+												<li
+													key={s.label}
+													className="w-[100px] max-ta:w-[calc(100vw*(100/1700))]"
+												>
 													<Link
 														to={s.href}
-														className="block text-[18px] font-medium text-[#222] text-center"
+														className="block text-[18px] font-medium text-[#222] text-center max-ta:text-[calc(100vw*(18/1700))]"
 													>
 														{s.label}
 													</Link>
@@ -120,7 +129,7 @@ export default function Header() {
 								e.preventDefault();
 								alert("준비중입니다.");
 							}}
-							className="text-[18px] font-medium text-[#222] text-center"
+							className="text-[18px] font-medium text-[#222] text-center max-ta:text-[calc(100vw*(18/1700))]"
 						>
 							피죤 공식몰
 						</Link>

@@ -25,6 +25,11 @@ const slideItems = [
 ];
 
 export default function MainBanner() {
+	const numClass =
+		"text-[26px] font-semibold text-[#222] max-ta:text-[calc(100vw*(26/1700))]";
+	const pagiClass =
+		"w-[16px] h-[16px] max-ta:w-[calc(100vw*(20/1700))] max-ta:h-[calc(100vw*(20/1700))]";
+
 	useEffect(() => {
 		if (!window.Swiper) return;
 		const swiper = new window.Swiper(".main_swiper", {
@@ -73,43 +78,47 @@ export default function MainBanner() {
 
 	return (
 		<section>
-			<div className="swiper main_swiper w-full h-[953px]">
+			<div className="swiper main_swiper w-full h-[953px] max-ta:h-[calc(100vw*(868/1700))]">
 				<div className="swiper-wrapper">
 					{slideItems.map((item, i) => (
 						<div key={i} className="swiper-slide">
 							<div>
 								<img src={item.img} alt="슬라이드 이미지" />
 							</div>
-							<div className="w-[440px] absolute top-[340px] left-[50%] translate-x-[-50%] ml-[-620px]">
-								<strong className="block mb-[42px] text-[72px] text-[#111] leading-[1.2]">
+							<div className="w-[500px] absolute top-[340px] left-[50%] translate-x-[-50%] ml-[-585px] max-ta:w-[calc(100vw*(500/1700))] max-ta:top-[calc(100vw*(340/1700))] max-ta:ml-[calc(100vw*(-480/1700))]">
+								<strong className="block mb-[42px] text-[72px] text-[#111] leading-[1.2] max-ta:mb-[calc(100vw*(42/1700))] max-ta:text-[calc(100vw*(72/1700))]">
 									{item.tit}
 								</strong>
-								<p className="text-[22px] text-[#432f2f]">{item.txt}</p>
+								<p className="text-[22px] text-[#432f2f] break-keep max-ta:text-[calc(100vw*(22/1700))]">
+									{item.txt}
+								</p>
 							</div>
 						</div>
 					))}
 				</div>
 			</div>
 
-			<div className="w-[270px] absolute bottom-[200px] left-[50%] translate-x-[-50%] ml-[-700px] z-100">
-				<div className="flex justify-between items-center mb-[30px]">
+			<div className="w-[270px] absolute top-[700px] left-[50%] translate-x-[-50%] ml-[-700px] z-100 max-ta:w-[calc(100vw*(270/1700))] max-ta:top-[calc(100vw*(700/1700))] max-ta:ml-[calc(100vw*(-600/1700))]">
+				<div className="flex justify-between items-center mb-[30px] max-ta:mb-[calc(100vw*(20/1700))]">
 					<div>
-						<span className="current">01</span>
-						<span className="divider"> / </span>
-						<span className="total">04</span>
+						<span className={`${numClass} current`}>01</span>
+						<span className={`${numClass} divider`}> / </span>
+						<span className={`${numClass} total`}>04</span>
 					</div>
 
-					<div className="flex items-center gap-[20px]">
-						<button className="bnr_prev text-[20px]">
-							<ChevronLeft size={16} />
+					<div className="flex items-center gap-[20px] max-ta:gap-[calc(100vw*(20/1700))]">
+						<button className="bnr_prev text-[20px] cursor-pointer max-ta:text-[calc(100vw*(20/1700))]">
+							<ChevronLeft className={pagiClass} />
 						</button>
-						<button className="bnr_next">
-							<ChevronRight size={16} />
+						<button className="bnr_next cursor-pointer">
+							<ChevronRight className={pagiClass} />
 						</button>
-						<button className="bnr_stop">■</button>
+						<button className="bnr_stop cursor-pointer">
+							<div className={`${pagiClass} bg-black`}></div>
+						</button>
 					</div>
 				</div>
-				<div className="bnr_progress w-full h-[2px] bg-[rgba(0,0,0,0.2)]">
+				<div className="bnr_progress w-full h-[2px] bg-[rgba(0,0,0,0.2)] max-ta:h-[calc(100vw*(2/1700))]">
 					<div className="bnr_progress_bar w-0 h-[100%] bg-[#222]"></div>
 				</div>
 			</div>
