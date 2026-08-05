@@ -6,22 +6,10 @@ const navItems = [
 		label: "피죤 소개",
 		href: "/about/About",
 		sub: [
-			{
-				label: "회사 소개",
-				href: "/about/About",
-			},
-			{
-				label: "회사 연혁",
-				href: "/about/About",
-			},
-			{
-				label: "CEO 인사말",
-				href: "/about/About",
-			},
-			{
-				label: "오시는 길",
-				href: "/about/About",
-			},
+			{ label: "회사 소개", href: "/about/About" },
+			{ label: "회사 연혁", href: "/about/About" },
+			{ label: "CEO 인사말", href: "/about/About" },
+			{ label: "오시는 길", href: "/about/About" },
 		],
 	},
 	{
@@ -58,42 +46,64 @@ const navItems = [
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
-
 	const location = useLocation();
 
+	// 페이지 이동 시 서브메뉴 닫기
 	const [prevPathname, setPrevPathname] = useState(location.pathname);
 	if (location.pathname !== prevPathname) {
 		setPrevPathname(location.pathname);
 		setIsOpen(false);
 	}
+
 	return (
-		<header>
-			<div className="hd_inner">
+		<header className="fixed top-0 left-0 z-[100000] w-full bg-white border-b border-[#eee]">
+			<div className="flex items-center justify-between w-[1600px] mx-auto">
 				<h1>
-					<Link to="/">
+					<Link to="/" className="block w-[110px] h-[55px]">
 						<img src="../../public/images/logo.png" alt="" />
 					</Link>
 				</h1>
-				<div className="hd_cont">
+
+				<div className="flex items-center justify-between w-[800px]">
 					<nav
+						className="relative flex items-center w-[508px] h-[90px] py-[15px]"
 						onMouseEnter={() => setIsOpen(true)}
 						onMouseLeave={() => setIsOpen(false)}
 					>
-						<ul className="main_menu_wp">
+						{/* 1depth 메뉴 */}
+						<ul className="flex justify-between w-full">
 							{navItems.map((item) => (
-								<li key={item.label}>
-									<Link to={item.href}>{item.label}</Link>
+								<li key={item.label} className="w-[100px]">
+									<Link
+										to={item.href}
+										className="block text-[18px] font-medium text-[#222] text-center"
+									>
+										{item.label}
+									</Link>
 								</li>
 							))}
 						</ul>
-						<div className={`sub_menu_wp${isOpen ? " active" : ""}`}>
-							<div className="lnb_inner">
+
+						{/* 2depth 서브메뉴 */}
+						<div
+							className={`fixed top-[90px] left-0 w-full h-[400px] bg-white transition-opacity duration-300 ${
+								isOpen
+									? "opacity-100 pointer-events-auto"
+									: "opacity-0 pointer-events-none"
+							}`}
+						>
+							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px]">
 								{navItems.map((item) => (
-									<ul key={item.label}>
+									<ul key={item.label} className="flex flex-col gap-4">
 										{item.sub &&
 											item.sub.map((s) => (
-												<li key={s.label}>
-													<Link to={s.href}>{s.label}</Link>
+												<li key={s.label} className="w-[100px]">
+													<Link
+														to={s.href}
+														className="block text-[18px] font-medium text-[#222] text-center"
+													>
+														{s.label}
+													</Link>
 												</li>
 											))}
 									</ul>
@@ -101,8 +111,17 @@ export default function Header() {
 							</div>
 						</div>
 					</nav>
-					<div className="hd_btn_wp">
-						<Link to="/" target="_blank">
+
+					<div>
+						<Link
+							to="/"
+							target="_blank"
+							onClick={(e) => {
+								e.preventDefault();
+								alert("준비중입니다.");
+							}}
+							className="text-[18px] font-medium text-[#222] text-center"
+						>
 							피죤 공식몰
 						</Link>
 					</div>
