@@ -78,22 +78,22 @@ const methodList = [
 
 export default function ContactProce() {
 	return (
-		<div className="pt-[150px] py-[150px] bg-[#fbfbfb]">
-			<div className="w-[1436px] mx-auto flex flex-col justify-between ">
-				<h3 className="mb-[100px] text-[#222] text-[46px] font-semibold">
+		<div className="pt-[clamp(75px,calc(100vw*(150/1700)),150px)] py-[clamp(75px,calc(100vw*(150/1700)),150px)] bg-[#fbfbfb]">
+			<div className="w-[clamp(590px,calc(100vw*(1436/1700)),1436px)] mx-auto flex flex-col justify-between ">
+				<h3 className="mb-[clamp(50px,calc(100vw*(100/1700)),100px)] text-[#222] text-[clamp(23px,calc(100vw*(46/1700)),46px)] font-semibold">
 					채용절차
 				</h3>
 				<div>
-					<ul className="flex mb-[80px]">
+					<ul className="flex mb-[clamp(40px,calc(100vw*(80/1700)),80px)]">
 						{proceItems.map((item, i) => (
 							<li
 								key={i}
-								className="relative w-[240px] h-[240px] ml-[-30px] flex justify-center items-center border border-[#dcdcdc] rounded-[50%]"
+								className="relative w-[clamp(120px,calc(100vw*(240/1700)),240px)] h-[clamp(120px,calc(100vw*(240/1700)),240px)] ml-[clamp(-15px,calc(100vw*(-30/1700)),-30px)] flex justify-center items-center border border-[#dcdcdc] rounded-[50%]"
 							>
-								<span className="text-[#222] text-[22px] font-semibold">
+								<span className="text-[#222] text-[clamp(12px,calc(100vw*(22/1700)),22px)] font-semibold">
 									{item.txt}
 								</span>
-								<div className="absolute top-[50%] left-[50%] translate-[-50%] text-[rgba(34,34,34,0.05)] text-[100px] font-extrabold">
+								<div className="absolute top-[50%] left-[50%] translate-[-50%] text-[rgba(34,34,34,0.05)] text-[clamp(50px,calc(100vw*(100/1700)),100px)] font-extrabold">
 									{item.num}
 								</div>
 							</li>
@@ -101,19 +101,22 @@ export default function ContactProce() {
 					</ul>
 					<div>
 						{typeList.map((item) => (
-							<div key={item.tit} className="mb-[40px]">
-								<h4 className="mb-[12px] text-[#000] text-[18px] font-semibold">
+							<div
+								key={item.tit}
+								className="mb-[clamp(20px,calc(100vw*(40/1700)),40px)]"
+							>
+								<h4 className="mb-[clamp(6px,calc(100vw*(12/1700)),12px)] text-[#000] text-[clamp(12px,calc(100vw*(18/1700)),18px)] font-semibold">
 									{item.tit}
 								</h4>
-								<p className="whitespace-pre-line text-[#444] text-[18px]">
+								<p className="whitespace-pre-line text-[#444] text-[clamp(12px,calc(100vw*(18/1700)),18px)]">
 									{item.txt}
 								</p>
 								{item.list && (
-									<ul className="mt-[12px]">
+									<ul className="mt-[clamp(6px,calc(100vw*(12/1700)),12px)]">
 										{item.list.map((li, i) => (
 											<li
 												key={i}
-												className="mb-[8px] ml-[20px] text-[#444] text-[16px] list-disc"
+												className="mb-[clamp(4px,calc(100vw*(8/1700)),8px)] ml-[20px] text-[#444] text-[clamp(12px,calc(100vw*(16/1700)),16px)] list-disc"
 											>
 												{li.item}
 											</li>
@@ -123,17 +126,20 @@ export default function ContactProce() {
 							</div>
 						))}
 					</div>
-					<ul className="pt-[80px] flex gap-[200px] border-t border-[#f1f1f1]">
+					<ul className="pt-[clamp(40px,calc(100vw*(80/1700)),80px)] flex gap-[clamp(100px,calc(100vw*(200/1700)),200px)] border-t border-[#f1f1f1]">
 						{methodList.map((item, i) => (
-							<li key={i} className="w-[240px]">
-								<strong className="block mb-[16px] text-[#000] text-[24px] font-semibold">
+							<li
+								key={i}
+								className="w-[clamp(130px,calc(100vw*(240/1700)),240px)]"
+							>
+								<strong className="block mb-[clamp(8px,calc(100vw*(16/1700)),16px)] text-[#000] text-[clamp(12px,calc(100vw*(24/1700)),24px)] font-semibold">
 									{item.tit}
 								</strong>
-								<p className="text-[#444] text-[16px] leading-relaxed">
+								<p className="text-[#444] text-[clamp(12px,calc(100vw*(16/1700)),16px)] leading-relaxed">
 									{item.txt}
 								</p>
 								{item.button && (
-									<button className="mt-[30px] flex gap-[60px] justify-center items-center w-[192px] h-[54px] text-[16px] font-semibold text-[#222] border border-[#222]">
+									<button className="mt-[clamp(15px,calc(100vw*(30/1700)),30px)] flex gap-[clamp(10px,calc(100vw*(40/1700)),60px)] justify-center items-center w-[clamp(120px,calc(100vw*(192/1700)),192px)] h-[clamp(40px,calc(100vw*(54/1700)),54px)] text-[clamp(12px,calc(100vw*(16/1700)),16px)] font-semibold text-[#222] border border-[#222]">
 										{item.button.btnTit} <ChevronRight size={16} />
 									</button>
 								)}

@@ -19,9 +19,11 @@ export default function AboutCi() {
 	const [fileType, setFileType] = useState("Basic");
 
 	return (
-		<section className="text-center w-[1636px] mx-auto mb-[100px]">
-			<h3 className="text-[50px] font-bold mb-[20px]">피죤 CI</h3>
-			<p className="text-[20px] text-gray-500 mb-10">
+		<section className="text-center w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
+			<h3 className="text-[clamp(25px,calc(100vw*(50/1700)),50px)] font-bold mb-[clamp(10px,calc(100vw*(20/1700)),20px)]">
+				피죤 CI
+			</h3>
+			<p className="text-[clamp(12px,calc(100vw*(20/1700)),20px)] text-gray-500 mb-10">
 				자세한 CI(Corporate Identity) 활용과 규정은 파일을 다운로드하여
 				확인하시기 바랍니다.
 			</p>
@@ -32,9 +34,9 @@ export default function AboutCi() {
 						<img
 							src="/images/about/about_logo.png"
 							alt="피죤 로고"
-							className="w-[380px]"
+							className="w-[clamp(190px,calc(100vw*(380/1700)),380px)]"
 						/>
-						<p className="text-[14px] text-gray-400 text-center">
+						<p className="text-[clamp(12px,calc(100vw*(14/1700)),14px)] text-gray-400 text-center">
 							행복한 삶을 창조하는 최상의 생활문화 파트너
 							<br /> Best Quality Life Partner
 						</p>
@@ -62,7 +64,7 @@ export default function AboutCi() {
 			<div className="flex justify-center gap-3 mt-6">
 				<button
 					onClick={() => setFileType("Basic")}
-					className={`px-5 py-2 rounded-full text-[15px] border ${
+					className={`px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border ${
 						fileType === "Basic"
 							? "bg-[#1f4e97] text-white border-[#1f4e97]"
 							: "border-gray-300 text-gray-600"
@@ -72,7 +74,7 @@ export default function AboutCi() {
 				</button>
 				<button
 					onClick={() => setFileType("Ai")}
-					className={`px-5 py-2 rounded-full text-[15px] border ${
+					className={`px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border ${
 						fileType === "Ai"
 							? "bg-[#1f4e97] text-white border-[#1f4e97]"
 							: "border-gray-300 text-gray-600"

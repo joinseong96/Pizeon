@@ -37,25 +37,27 @@ export default function AboutPhilosophy() {
 	}, []);
 
 	return (
-		<section className="w-[1636px] mx-auto mb-[100px]">
-			<h3 className="text-[50px] font-bold text-center mb-[80px]">피죤철학</h3>
+		<section className="w-[clamp(100%,calc(100vw*(1636/1700)),1636px)] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)]">
+			<h3 className="text-[clamp(25px,calc(100vw*(50/1700)),50px)] font-bold text-center mb-[clamp(40px,calc(100vw*(80/1700)),80px)]">
+				피죤철학
+			</h3>
 			<div className="swiper about_swiper">
 				<div className="swiper-wrapper">
 					{philosophyItems.map((item, i) => (
 						<div key={i} className="swiper-slide">
-							<div className="absolute top-[140px] w-[25%] left-[50%] transform translateX-[-50%] ml-[-600px] p-[55px] bg-[rgba(0,0,0,0.8)]">
-								<p className="text-[18px] text-[rgba(255,255,255,0.6)] font-medium mb-3">
+							<div className="absolute top-[clamp(70px,calc(100vw*(140/1700)),140px)] w-[clamp(250px,calc(100vw*(470/1700)),470px)] left-[50%] transform translateX-[-50%] ml-[clamp(-300px,calc(100vw*(-600/1700)),-600px)] p-[clamp(27px,calc(100vw*(55/1700)),55px)] bg-[rgba(0,0,0,0.8)]">
+								<p className="text-[clamp(12px,calc(100vw*(18/1700)),18px)] text-[rgba(255,255,255,0.6)] font-medium mb-3">
 									{item.subTitle}
 								</p>
-								<h4 className="text-[24px] text-white font-semibold mb-5">
+								<h4 className="text-[clamp(12px,calc(100vw*(24/1700)),24px)] text-white font-semibold mb-5">
 									{item.title}
 								</h4>
-								<p className="text-[18px] text-white whitespace-pre-line leading-relaxed">
+								<p className="text-[clamp(12px,calc(100vw*(18/1700)),18px)] text-white whitespace-pre-line leading-relaxed">
 									{item.desc}
 								</p>
 							</div>
-							<div>
-								<img src={item.img} alt="피죤 철학" />
+							<div className="w-full h-[clamp(320px,calc(100vw*(640/1700)),640px)]">
+								<img src={item.img} alt="피죤 철학" className="h-[100%]" />
 							</div>
 						</div>
 					))}

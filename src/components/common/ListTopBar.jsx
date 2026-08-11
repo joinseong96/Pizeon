@@ -12,8 +12,8 @@ export default function ListTopBar({
 	const inputRef = useRef(null);
 
 	return (
-		<div className="mb-[40px]">
-			<div className="w-[1636px] mx-auto flex items-center justify-between">
+		<div className="mb-[clamp(20px,calc(100vw*(40/1700)),40px)]">
+			<div className="w-[1636px] mx-auto flex items-center justify-between max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
 				<p className="text-sm text-gray-600">
 					[<span className="font-semibold text-black">{currentPage}</span> /{" "}
 					{totalPages} 페이지] 총 {totalCount}건
