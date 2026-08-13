@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
@@ -52,6 +52,18 @@ export default function Header() {
 	const [isMbMenuOpen, setIsMbMenuOpen] = useState(false);
 	const location = useLocation();
 
+	useEffect(() => {
+		if (isMbMenuOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isMbMenuOpen]);
+
 	// 페이지 이동 시 서브메뉴 닫기
 	const [prevPathname, setPrevPathname] = useState(location.pathname);
 	if (location.pathname !== prevPathname) {
@@ -83,7 +95,7 @@ export default function Header() {
 				<button
 					type="button"
 					onClick={() => setIsMbMenuOpen((prev) => !prev)}
-					className="hidden max-mo:flex max-mo:absolute max-mo:right-[calc(100vw*(15/360))] max-mo:top-1/2 max-mo:-translate-y-1/2 max-mo:w-[calc(100vw*(25/360))] max-mo:h-[calc(100vw*(25/360))] max-mo:items-center max-mo:justify-center"
+					className="hidden max-mo:flex max-mo:absolute max-mo:right-[calc(100vw*(15/360))] max-mo:top-1/2 max-mo:-translate-y-1/2 max-mo:w-[calc(100vw*(25/360))] max-mo:h-[calc(100vw*(25/360))] max-mo:items-center max-mo:justify-center cursor-pointer"
 				>
 					{isMbMenuOpen ? (
 						<svg
