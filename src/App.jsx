@@ -10,7 +10,7 @@ import Contact from "./pages/contact/Contact";
 
 export default function App() {
 	return (
-		<div id="wrap">
+		<div id="wrap" className="max-mo:pt-[calc(100vw*(60/360))]">
 			<ScrollTop />
 			<Header />
 			<Routes>

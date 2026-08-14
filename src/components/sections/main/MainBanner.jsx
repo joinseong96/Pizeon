@@ -98,7 +98,7 @@ export default function MainBanner() {
 				</div>
 			</div>
 
-			<div className="w-[270px] absolute top-[700px] left-[50%] translate-x-[-50%] ml-[-700px] z-100 max-ta:w-[calc(100vw*(270/1700))] max-ta:top-[calc(100vw*(700/1700))] max-ta:ml-[calc(100vw*(-600/1700))]">
+			<div className="w-[270px] absolute top-[700px] left-[50%] translate-x-[-50%] ml-[-700px] z-100 max-ta:w-[calc(100vw*(270/1700))] max-ta:top-[calc(100vw*(700/1700))] max-ta:ml-[calc(100vw*(-600/1700))] max-mo:top-[calc(100vw*(200/360))]">
 				<div className="flex justify-between items-center mb-[30px] max-ta:mb-[calc(100vw*(20/1700))]">
 					<div>
 						<span className={`${numClass} current`}>01</span>

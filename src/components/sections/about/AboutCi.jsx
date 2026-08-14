@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const ciColors = [
 	{
 		name: "Pigeon Dark Blue",
@@ -16,8 +14,6 @@ const ciColors = [
 ];
 
 export default function AboutCi() {
-	const [fileType, setFileType] = useState("Basic");
-
 	return (
 		<section className="text-center w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
 			<h3 className="text-[clamp(25px,calc(100vw*(50/1700)),50px)] font-bold mb-[clamp(10px,calc(100vw*(20/1700)),20px)]">
@@ -62,24 +58,10 @@ export default function AboutCi() {
 			</div>
 
 			<div className="flex justify-center gap-3 mt-6">
-				<button
-					onClick={() => setFileType("Basic")}
-					className={`px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border ${
-						fileType === "Basic"
-							? "bg-[#1f4e97] text-white border-[#1f4e97]"
-							: "border-gray-300 text-gray-600"
-					}`}
-				>
+				<button className="px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border bg-[#1f4e97] text-white border-[#1f4e97]">
 					Basic ↓
 				</button>
-				<button
-					onClick={() => setFileType("Ai")}
-					className={`px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border ${
-						fileType === "Ai"
-							? "bg-[#1f4e97] text-white border-[#1f4e97]"
-							: "border-gray-300 text-gray-600"
-					}`}
-				>
+				<button className="px-5 py-2 rounded-full text-[clamp(12px,calc(100vw*(15/1700)),15px)] border border-gray-300 text-gray-600">
 					AI ↓
 				</button>
 			</div>

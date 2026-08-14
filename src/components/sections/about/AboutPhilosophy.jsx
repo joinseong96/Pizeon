@@ -27,10 +27,10 @@ export default function AboutPhilosophy() {
 		new window.Swiper(".about_swiper", {
 			loop: true,
 			slidesPerView: 1,
-			autoplay: {
-				delay: 4000,
-				disableOnInteraction: false,
-			},
+			// autoplay: {
+			// 	delay: 4000,
+			// 	disableOnInteraction: false,
+			// },
 			speed: 1200,
 			allowTouchMove: false,
 		});
@@ -45,7 +45,7 @@ export default function AboutPhilosophy() {
 				<div className="swiper-wrapper">
 					{philosophyItems.map((item, i) => (
 						<div key={i} className="swiper-slide">
-							<div className="absolute top-[clamp(70px,calc(100vw*(140/1700)),140px)] w-[clamp(250px,calc(100vw*(470/1700)),470px)] left-[50%] transform translateX-[-50%] ml-[clamp(-300px,calc(100vw*(-600/1700)),-600px)] p-[clamp(27px,calc(100vw*(55/1700)),55px)] bg-[rgba(0,0,0,0.8)]">
+							<div className="absolute top-[clamp(70px,calc(100vw*(140/1700)),140px)] w-[clamp(250px,calc(100vw*(470/1700)),470px)] left-[50%] transform translateX-[-50%] ml-[clamp(-600px,calc(100vw*(-600/1700)),-300px)] p-[clamp(27px,calc(100vw*(55/1700)),55px)] bg-[rgba(0,0,0,0.8)]">
 								<p className="text-[clamp(12px,calc(100vw*(18/1700)),18px)] text-[rgba(255,255,255,0.6)] font-medium mb-3">
 									{item.subTitle}
 								</p>
@@ -57,7 +57,11 @@ export default function AboutPhilosophy() {
 								</p>
 							</div>
 							<div className="w-full h-[clamp(320px,calc(100vw*(640/1700)),640px)]">
-								<img src={item.img} alt="피죤 철학" className="h-[100%]" />
+								<img
+									src={item.img}
+									alt="피죤 철학"
+									className="w-full h-[100%]"
+								/>
 							</div>
 						</div>
 					))}
