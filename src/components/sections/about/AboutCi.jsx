@@ -26,7 +26,7 @@ export default function AboutCi() {
 
 			<div className="max-w-3xl mx-auto border border-gray-200 rounded-xl overflow-hidden text-left">
 				<div className="grid grid-cols-2">
-					<div className="flex flex-col items-center justify-center gap-3 p-10 bg-gray-50">
+					<div className="flex flex-col items-center justify-center gap-3 p-10 bg-gray-50 max-mo:p-5">
 						<img
 							src="/images/about/about_logo.png"
 							alt="피죤 로고"
@@ -40,7 +40,10 @@ export default function AboutCi() {
 
 					<div className="divide-y divide-gray-200">
 						{ciColors.map((color, i) => (
-							<div key={i} className="flex items-center gap-10 p-10">
+							<div
+								key={i}
+								className="flex items-center gap-10 p-10 max-mo:flex-col max-mo:gap-4 max-mo:p-4"
+							>
 								<div className="w-24">
 									<p className="text-sm font-semibold whitespace-nowrap">
 										{color.name}

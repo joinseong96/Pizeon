@@ -8,7 +8,10 @@ export default function NewsList({ currentPage }) {
 		<div className="w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
 			<ul className="flex flex-wrap gap-y-[clamp(40px,calc(100vw*(80/1700)),80px)] gap-x-[clamp(10px,calc(100vw*(20/1700)),20px)]">
 				{currentItems.map((item, i) => (
-					<li key={i}>
+					<li
+						key={i}
+						className="w-[clamp(360px,calc(100vw*(808/1700)),808px)] max-mo:w-[100%]"
+					>
 						<div className="mb-[clamp(12px,calc(100vw*(25/1700)),25px)]">
 							<img src={item.img} alt={item.alt} />
 						</div>

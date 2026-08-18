@@ -9,7 +9,7 @@ export default function AboutBanner() {
 
 			<div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
 
-			<div className="absolute inset-0 flex flex-col justify-center px-16 text-white">
+			<div className="absolute inset-0 flex flex-col justify-center px-16 text-white max-mo:px-10">
 				<h3 className="text-[clamp(25px,calc(100vw*(50/1700)),50px)] font-bold leading-snug mb-4">
 					다가오는 미래를 준비하는
 					<br />
@@ -21,8 +21,8 @@ export default function AboutBanner() {
 					<br /> 경영 철학으로 삼아 고객만족을 실현해온 대한민국 대표 친환경
 					종합생활용품 기업입니다.
 					<br /> 이러한 노력을 기반으로 ㈜피죤은 탄탄한 시장을 점유한 것은 물론
-					<br /> 갈수록 치열해지는 생활용품 시장에서 우수한 경쟁력을 확보하고
-					있습니다.
+					<br className="max-mo:hidden" /> 갈수록 치열해지는 생활용품 시장에서
+					우수한 경쟁력을 확보하고 있습니다.
 				</p>
 			</div>
 		</section>

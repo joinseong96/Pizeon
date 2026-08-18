@@ -181,9 +181,9 @@ export default function Header() {
 								isOpen
 									? "opacity-100 pointer-events-auto"
 									: "opacity-0 pointer-events-none"
-							} max-ta:top-[calc(100vw*(90/1700))] max-ta:h-[calc(100vw*(400/1700))] max-mo:hidden`}
+							} max-ta:top-[calc(100vw*(90/1700))] max-ta:h-[calc(100vw*(480/1700))] max-mo:hidden`}
 						>
-							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px] max-ta:top-[calc(100vw*(34/1700))] max-ta:ml-[calc(100vw*(255/1700))]">
+							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px] max-ta:w-[calc(100vw*(508/1700))] max-ta:top-[calc(100vw*(34/1700))] max-ta:ml-[calc(100vw*(200/1700))]">
 								{navItems.map((item) => (
 									<ul key={item.label} className="flex flex-col gap-4">
 										{item.sub &&

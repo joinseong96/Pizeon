@@ -78,13 +78,13 @@ const methodList = [
 
 export default function ContactProce() {
 	return (
-		<div className="pt-[clamp(75px,calc(100vw*(150/1700)),150px)] py-[clamp(75px,calc(100vw*(150/1700)),150px)] bg-[#fbfbfb]">
-			<div className="w-[clamp(590px,calc(100vw*(1436/1700)),1436px)] mx-auto flex flex-col justify-between ">
-				<h3 className="mb-[clamp(50px,calc(100vw*(100/1700)),100px)] text-[#222] text-[clamp(23px,calc(100vw*(46/1700)),46px)] font-semibold">
+		<div className="pt-[clamp(50px,calc(100vw*(150/1700)),150px)] py-[clamp(75px,calc(100vw*(150/1700)),150px)] bg-[#fbfbfb]">
+			<div className="w-[clamp(320px,calc(100vw*(1436/1700)),1436px)] mx-auto flex flex-col justify-between ">
+				<h3 className="mb-[clamp(25px,calc(100vw*(100/1700)),100px)] text-[#222] text-[clamp(23px,calc(100vw*(46/1700)),46px)] font-semibold">
 					채용절차
 				</h3>
 				<div>
-					<ul className="flex mb-[clamp(40px,calc(100vw*(80/1700)),80px)]">
+					<ul className="flex mb-[clamp(40px,calc(100vw*(80/1700)),80px)] max-mo:flex-wrap">
 						{proceItems.map((item, i) => (
 							<li
 								key={i}
@@ -126,11 +126,11 @@ export default function ContactProce() {
 							</div>
 						))}
 					</div>
-					<ul className="pt-[clamp(40px,calc(100vw*(80/1700)),80px)] flex gap-[clamp(100px,calc(100vw*(200/1700)),200px)] border-t border-[#f1f1f1]">
+					<ul className="pt-[clamp(40px,calc(100vw*(80/1700)),80px)] flex gap-[clamp(40px,calc(100vw*(100/1700)),200px)] border-t border-[#f1f1f1] max-mo:flex-col">
 						{methodList.map((item, i) => (
 							<li
 								key={i}
-								className="w-[clamp(130px,calc(100vw*(240/1700)),240px)]"
+								className="w-[clamp(100%,calc(100vw*(240/1700)),240px)]"
 							>
 								<strong className="block mb-[clamp(8px,calc(100vw*(16/1700)),16px)] text-[#000] text-[clamp(12px,calc(100vw*(24/1700)),24px)] font-semibold">
 									{item.tit}

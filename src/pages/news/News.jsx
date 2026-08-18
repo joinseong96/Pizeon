@@ -17,7 +17,7 @@ export default function News() {
 	}, [currentPage]);
 
 	return (
-		<div className="pt-[clamp(75px,calc(100vw*(150/1700)),150px)] pb-[clamp(75px,calc(100vw*(150/1700)),150px)]">
+		<div className="pt-[clamp(50px,calc(100vw*(150/1700)),150px)] pb-[clamp(75px,calc(100vw*(150/1700)),150px)]">
 			<PageTitle title="피죤 소식" />
 			<ListTopBar
 				currentPage={currentPage}

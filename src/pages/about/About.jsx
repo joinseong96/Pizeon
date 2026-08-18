@@ -5,7 +5,7 @@ import AboutCI from "../../components/sections/about/AboutCi";
 
 export default function About() {
 	return (
-		<div className="pt-[clamp(75px,calc(100vw*(150/1700)),150px)]">
+		<div className="pt-[clamp(50px,calc(100vw*(150/1700)),150px)]">
 			<PageTitle title="피죤 소개" />
 			<AboutBanner />
 			<AboutPhilosophy />
