@@ -6,7 +6,7 @@ export default function NewsList({ currentPage }) {
 	const currentItems = newsListItmes.slice(startIndex, endIndex);
 	return (
 		<div className="w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
-			<ul className="flex flex-wrap gap-y-[clamp(40px,calc(100vw*(80/1700)),80px)] gap-x-[clamp(10px,calc(100vw*(20/1700)),20px)]">
+			<ul className="flex flex-wrap gap-y-[clamp(30px,calc(100vw*(80/1700)),80px)] gap-x-[clamp(10px,calc(100vw*(20/1700)),20px)]">
 				{currentItems.map((item, i) => (
 					<li
 						key={i}
@@ -26,7 +26,7 @@ export default function NewsList({ currentPage }) {
 									</span>
 								))}
 							</div>
-							<p className="mb-[clamp(18px,calc(100vw*(35/1700)),35px)] text-[clamp(12px,calc(100vw*(24/1700)),24px)] font-semibold font-[#222]">
+							<p className="mb-[clamp(10px,calc(100vw*(35/1700)),35px)] text-[clamp(12px,calc(100vw*(24/1700)),24px)] font-semibold text-[#222]">
 								{item.title}
 							</p>
 							<small className="text-[#777] text-[clamp(12px,calc(100vw*(16/1700)),16px)]">
