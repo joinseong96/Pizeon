@@ -87,7 +87,7 @@ export default function MainSection01() {
 											isActive ? "visible opacity-100" : "invisible opacity-0"
 										}`}
 									>
-										<strong className="block mb-[24px] text-[38px] max-ta:mb-[calc(100vw*(24/1700))] max-ta:text-[calc(100vw*(38/1700))] max-mo:mb-[calc(100vw*(8/360))] max-mo:text-[calc(100vw*(14/360))] whitespace-pre-wrap">
+										<strong className="block mb-[24px] text-[38px] max-ta:mb-[calc(100vw*(24/1700))] max-ta:text-[calc(100vw*(38/1700))] max-mo:mb-[calc(100vw*(8/360))] max-mo:text-[calc(100vw*(12/360))] whitespace-pre-wrap">
 											{item.title}
 										</strong>
 										{item.sub.map((s, j) => (

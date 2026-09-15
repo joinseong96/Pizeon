@@ -47,7 +47,7 @@ export default function Footer() {
 							{infoItem.map((item, i) => (
 								<div
 									key={i}
-									className="text-[14px] text-[#444] max-ta:text-[calc(100vw*(14/1700))] max-mo:text-[calc(100vw*(13/360))]"
+									className="text-[14px] text-[#444] max-ta:text-[calc(100vw*(14/1700))] max-mo:text-[calc(100vw*(10/360))]"
 								>
 									{item.txt}
 								</div>

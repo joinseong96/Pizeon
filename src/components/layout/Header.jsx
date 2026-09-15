@@ -95,7 +95,7 @@ export default function Header() {
 				<button
 					type="button"
 					onClick={() => setIsMbMenuOpen((prev) => !prev)}
-					className="hidden max-mo:flex max-mo:absolute max-mo:right-[calc(100vw*(15/360))] max-mo:top-1/2 max-mo:-translate-y-1/2 max-mo:w-[calc(100vw*(25/360))] max-mo:h-[calc(100vw*(25/360))] max-mo:items-center max-mo:justify-center cursor-pointer"
+					className="hidden max-mo:flex max-mo:absolute max-mo:right-[calc(100vw*(20/360))] max-mo:top-1/2 max-mo:-translate-y-1/2 max-mo:w-[calc(100vw*(25/360))] max-mo:h-[calc(100vw*(25/360))] max-mo:items-center max-mo:justify-center cursor-pointer"
 				>
 					{isMbMenuOpen ? (
 						<svg
@@ -122,12 +122,12 @@ export default function Header() {
 				</button>
 
 				<div
-					className={`flex items-center justify-between w-[800px] max-ta:w-[calc(100vw*(800/1700))] max-mo:w-full max-mo:h-[100vh] max-mo:absolute max-mo:top-[calc(100vw*(60/360))] max-mo:left-0 max-mo:p-[calc(100vw*(40/360))] max-mo:flex-col-reverse max-mo:gap-[calc(100vw*(50/360))] max-mo:items-start max-mo:bg-[#fff] ${
+					className={`flex items-center justify-between w-[800px] max-ta:w-[calc(100vw*(800/1700))] max-mo:w-full max-mo:h-[calc(100dvh_-_100vw*(60/360))] max-mo:absolute max-mo:top-[calc(100vw*(60/360))] max-mo:left-0 max-mo:p-[calc(100vw*(40/360))] max-mo:flex-col-reverse max-mo:items-start max-mo:bg-[#fff] ${
 						isMbMenuOpen ? "max-mo:flex" : "max-mo:hidden"
 					}`}
 				>
 					<nav
-						className="relative flex items-center w-[508px] h-[90px] py-[15px] max-ta:w-[calc(100vw*(508/1700))] max-ta:h-[calc(100vw*(90/1700))] max-ta:py-[calc(100vw*(15/1700))] max-mo:p-0 max-mo:w-full max-mo:h-[100%] max-mo:items-start"
+						className="relative flex items-center w-[508px] h-[90px] py-[15px] max-ta:w-[calc(100vw*(508/1700))] max-ta:h-[calc(100vw*(90/1700))] max-ta:py-[calc(100vw*(15/1700))] max-mo:p-0 max-mo:w-full max-mo:h-[100%] max-mo:min-h-0 max-mo:items-start max-mo:overflow-y-auto max-mo:overscroll-contain"
 						onMouseEnter={() => setIsOpen(true)}
 						onMouseLeave={() => setIsOpen(false)}
 					>
@@ -181,7 +181,7 @@ export default function Header() {
 								isOpen
 									? "opacity-100 pointer-events-auto"
 									: "opacity-0 pointer-events-none"
-							} max-ta:top-[calc(100vw*(90/1700))] max-ta:h-[calc(100vw*(480/1700))] max-mo:hidden`}
+							} max-ta:top-[calc(100vw*(90/1700))] max-ta:h-[calc(100vw*(520/1700))] max-mo:hidden`}
 						>
 							<div className="absolute top-[34px] left-1/2 -translate-x-1/2 ml-[255px] flex justify-between w-[508px] max-ta:w-[calc(100vw*(508/1700))] max-ta:top-[calc(100vw*(34/1700))] max-ta:ml-[calc(100vw*(200/1700))]">
 								{navItems.map((item) => (
@@ -213,11 +213,22 @@ export default function Header() {
 							e.preventDefault();
 							alert("준비중입니다.");
 						}}
-						className="text-[18px] font-medium text-[#222] text-center max-ta:text-[calc(100vw*(18/1700))] max-mo:text-[calc(100vw*(13/360))]"
+						className="text-[18px] font-medium text-[#222] text-center max-ta:text-[calc(100vw*(18/1700))] max-mo:hidden"
 					>
 						피죤 공식몰
 					</Link>
 				</div>
+				<Link
+					to="/"
+					target="_blank"
+					onClick={(e) => {
+						e.preventDefault();
+						alert("준비중입니다.");
+					}}
+					className="hidden max-mo:block font-medium text-[#222] text-center max-mo:absolute max-mo:top-[calc(100vw*(20/360))] max-mo:left-[calc(100vw*(35/360))] max-mo:text-[calc(100vw*(13/360))]"
+				>
+					피죤 공식몰
+				</Link>
 			</div>
 		</header>
 	);
