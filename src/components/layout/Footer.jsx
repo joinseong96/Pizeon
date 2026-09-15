@@ -27,7 +27,7 @@ export default function Footer() {
 					<h2 className="w-[112px] h-[56px] max-ta:w-[calc(100vw*(112/1700))] max-ta:h-[calc(100vw*(56/1700))] max-mo:w-[calc(100vw*(66/360))] max-mo:h-[calc(100vw*(33/360))]">
 						<img
 							src="../../images/logo02.png"
-							alt=""
+							alt="footer logo"
 							className="w-full h-full object-contain"
 						/>
 					</h2>
@@ -60,7 +60,11 @@ export default function Footer() {
 						<li key={i}>
 							<a href={item.href}>
 								<div className="cont_img w-[32px] max-ta:w-[calc(100vw*(32/1700))] max-mo:w-[calc(100vw*(28/360))]">
-									<img src={item.img} alt="" className="w-full h-auto" />
+									<img
+										src={item.img}
+										alt="sns icon"
+										className="w-full h-auto"
+									/>
 								</div>
 							</a>
 						</li>

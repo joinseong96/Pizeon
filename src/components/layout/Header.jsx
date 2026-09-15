@@ -88,7 +88,7 @@ export default function Header() {
 						to="/"
 						className="block w-[110px] h-[55px] max-ta:w-[calc(100vw*(110/1700))] max-ta:h-[calc(100vw*(55/1700))] max-mo:w-[calc(100vw*(66/360))] max-mo:h-[calc(100vw*(30/360))]"
 					>
-						<img src="../../public/images/logo.png" alt="" />
+						<img src="/images/logo.png" alt="pizeon logo" />
 					</Link>
 				</h1>
 

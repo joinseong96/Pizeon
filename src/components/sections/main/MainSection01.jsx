@@ -68,7 +68,7 @@ export default function MainSection01() {
 								>
 									<img
 										src={isActive ? item.imgAfter : item.img}
-										alt=""
+										alt="품질 경쟁력 컨텐츠 배너"
 										className="w-full h-full object-cover"
 									/>
 								</div>

@@ -67,7 +67,7 @@ export default function MainSection02() {
 						<div className={`shrink-0 ${item.imgCont}`}>
 							<img
 								src={item.img}
-								alt=""
+								alt="피죤 대표 컨텐츠 배너"
 								className="w-full h-full object-cover"
 							/>
 						</div>
