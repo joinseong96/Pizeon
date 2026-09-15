@@ -15,7 +15,7 @@ const ciColors = [
 
 export default function AboutCi() {
 	return (
-		<section className="text-center w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1636/1700))] max-mo:w-[calc(100vw*(320/360))]">
+		<section className="text-center w-[1636px] mx-auto mb-[clamp(50px,calc(100vw*(100/1700)),100px)] max-ta:w-[calc(100vw*(1540/1700))] max-mo:w-[calc(100vw*(320/360))]">
 			<h3 className="text-[clamp(25px,calc(100vw*(50/1700)),50px)] font-bold mb-[clamp(10px,calc(100vw*(20/1700)),20px)]">
 				피죤 CI
 			</h3>

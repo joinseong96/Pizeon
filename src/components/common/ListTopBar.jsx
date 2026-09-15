@@ -13,7 +13,7 @@ export default function ListTopBar({
 
 	return (
 		<div className="mb-[clamp(20px,calc(100vw*(40/1700)),40px)]">
-			<div className="w-[1636px] mx-auto flex items-center justify-between max-ta:w-[calc(100vw*(1636/1700))] max-mo:relative max-mo:w-[calc(100vw*(320/360))] max-mo:flex-col max-mo:items-start max-mo:gap-[calc(100vw*(30/360))]">
+			<div className="w-[1636px] mx-auto flex items-center justify-between max-ta:w-[calc(100vw*(1540/1700))] max-mo:relative max-mo:w-[calc(100vw*(320/360))] max-mo:flex-col max-mo:items-start max-mo:gap-[calc(100vw*(15/360))]">
 				<p className="text-sm text-gray-600">
 					[<span className="font-semibold text-black">{currentPage}</span> /{" "}
 					{totalPages} 페이지] 총 {totalCount}건
